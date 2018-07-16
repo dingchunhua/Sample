@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F49E94B20FC41FF00369C85 /* ChainedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F49E94A20FC41FF00369C85 /* ChainedViewController.m */; };
+		5F49E95020FC42D600369C85 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F49E94F20FC42D600369C85 /* Calculator.m */; };
+		5F49E95320FC430100369C85 /* CalculateOperate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F49E95220FC430100369C85 /* CalculateOperate.m */; };
 		5F8F87CC20F8933900037793 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F87CB20F8933900037793 /* AppDelegate.m */; };
 		5F8F87CF20F8933900037793 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F87CE20F8933900037793 /* ViewController.m */; };
 		5F8F87D220F8933900037793 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8F87D020F8933900037793 /* Main.storyboard */; };
@@ -41,6 +44,12 @@
 		123022403A0E38FFF019BBAD /* libPods-SampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36836461D54DE7C31D90975E /* Pods-SampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleTests/Pods-SampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		5864071C16183346CE5B3CD5 /* libPods-SampleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F49E94920FC41FF00369C85 /* ChainedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChainedViewController.h; sourceTree = "<group>"; };
+		5F49E94A20FC41FF00369C85 /* ChainedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainedViewController.m; sourceTree = "<group>"; };
+		5F49E94E20FC42D600369C85 /* Calculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		5F49E94F20FC42D600369C85 /* Calculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		5F49E95120FC430100369C85 /* CalculateOperate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculateOperate.h; sourceTree = "<group>"; };
+		5F49E95220FC430100369C85 /* CalculateOperate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculateOperate.m; sourceTree = "<group>"; };
 		5F8F87C720F8933900037793 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8F87CA20F8933900037793 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5F8F87CB20F8933900037793 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -103,6 +112,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5F49E94820FC41E500369C85 /* Chained */ = {
+			isa = PBXGroup;
+			children = (
+				5F49E94C20FC42BE00369C85 /* Calculator */,
+				5F49E94920FC41FF00369C85 /* ChainedViewController.h */,
+				5F49E94A20FC41FF00369C85 /* ChainedViewController.m */,
+			);
+			path = Chained;
+			sourceTree = "<group>";
+		};
+		5F49E94C20FC42BE00369C85 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				5F49E94D20FC42BE00369C85 /* Calculate */,
+				5F49E94E20FC42D600369C85 /* Calculator.h */,
+				5F49E94F20FC42D600369C85 /* Calculator.m */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		5F49E94D20FC42BE00369C85 /* Calculate */ = {
+			isa = PBXGroup;
+			children = (
+				5F49E95120FC430100369C85 /* CalculateOperate.h */,
+				5F49E95220FC430100369C85 /* CalculateOperate.m */,
+			);
+			path = Calculate;
+			sourceTree = "<group>";
+		};
 		5F8F87BE20F8933900037793 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +166,7 @@
 		5F8F87C920F8933900037793 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				5F49E94820FC41E500369C85 /* Chained */,
 				5F8F87CA20F8933900037793 /* AppDelegate.h */,
 				5F8F87CB20F8933900037793 /* AppDelegate.m */,
 				5F8F87CD20F8933900037793 /* ViewController.h */,
@@ -363,8 +402,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F8F87CF20F8933900037793 /* ViewController.m in Sources */,
+				5F49E94B20FC41FF00369C85 /* ChainedViewController.m in Sources */,
 				5F8F87DA20F8933A00037793 /* main.m in Sources */,
 				5F8F87CC20F8933900037793 /* AppDelegate.m in Sources */,
+				5F49E95020FC42D600369C85 /* Calculator.m in Sources */,
+				5F49E95320FC430100369C85 /* CalculateOperate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,7 +578,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Sample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dch.Sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -550,7 +595,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Sample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dch.Sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -564,7 +612,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dch.SampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -579,7 +631,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dch.SampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -593,7 +649,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dch.SampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -607,7 +667,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dch.SampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

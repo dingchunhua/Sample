@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ChainedViewController.h"
 
 NSString * kViewControllerCellIdentifier = @"kViewControllerCellIdentifier";
 NSString * kViewControllerDataSourceKeyTitle = @"kViewControllerDataSourceKeyTitle";
@@ -83,8 +84,8 @@ NSString * kViewControllerDataSourceKeyClass = @"kViewControllerDataSourceKeyCla
     if (_dataSource == nil) {
         _dataSource = @[
                         @{
-                            kViewControllerDataSourceKeyTitle:@"九宫格",
-                            kViewControllerDataSourceKeyClass:[ViewController class]
+                            kViewControllerDataSourceKeyTitle:@"链式语法",
+                            kViewControllerDataSourceKeyClass:[ChainedViewController class]
                             }
                         ];
     }

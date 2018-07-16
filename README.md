@@ -1,11 +1,60 @@
 # Sample
 Some simple examples
 
-### 链式语法
+## 链式语法
 ```objc
-
 Calculator *calculator = [[Calculator alloc] init];
 CGFloat result = calculator.addition(10).subtract(5).subtract(2).multiply(3).division(4).calculate;
 NSLog(@"%f", result);
+```
+
+## 添加集合对象弱引用
+对象添加到集合引用计数不+1的几种方式：
+
+#### 1.weakObject
+```objc
+TestModel *model = [[TestModel alloc] init];
+NSLog(@"添加集合前:%ld", (long)CFGetRetainCount((__bridge CFTypeRef)model)); // RetainCount:1
+
+// @property (nonatomic, weak) id value;
+WeakObject *wo = [[WeakObject alloc] init];
+wo.value = model;
+
+NSMutableArray *array = [[NSMutableArray alloc] init];
+[array addObject:wo];
+NSLog(@"添加集合后:%ld", (long)CFGetRetainCount((__bridge CFTypeRef)model)); // RetainCount:1
+
+```
+
+#### 2.NSHashTable
+```objc
+TestModel *model = [[TestModel alloc] init];
+NSLog(@"添加集合前:%ld", (long)CFGetRetainCount((__bridge CFTypeRef)model)); // RetainCount:1
     
+NSHashTable *hashTable = [NSHashTable hashTableWithOptions:NSPointerFunctionsWeakMemory];
+[hashTable addObject:model];
+    
+NSLog(@"添加集合后:%ld", (long)CFGetRetainCount((__bridge CFTypeRef)model)); // RetainCount:1
+```
+
+#### 3.NSMapTable
+```objc
+TestModel *model = [[TestModel alloc] init];
+NSLog(@"添加集合前:%ld", (long)CFGetRetainCount((__bridge CFTypeRef)model)); // RetainCount:1
+    
+NSMapTable *mapTable = [NSMapTable weakToWeakObjectsMapTable];
+[mapTable setObject:model forKey:@"test"];
+    
+NSLog(@"添加集合后:%ld", (long)CFGetRetainCount((__bridge CFTypeRef)model)); // RetainCount:1
+```
+
+#### 4.NSPointerArray
+```objc
+TestModel *model = [[TestModel alloc] init];
+NSLog(@"添加集合前:%ld", (long)CFGetRetainCount((__bridge CFTypeRef)model)); // RetainCount:1
+    
+NSPointerArray *pointerArray = [NSPointerArray weakObjectsPointerArray];
+[pointerArray addPointer:(__bridge void * _Nullable)(model)];
+    
+NSLog(@"添加集合后:%ld", (long)CFGetRetainCount((__bridge CFTypeRef)model)); // RetainCount:1
 ```

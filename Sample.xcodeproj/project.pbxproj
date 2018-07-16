@@ -10,6 +10,9 @@
 		5F49E94B20FC41FF00369C85 /* ChainedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F49E94A20FC41FF00369C85 /* ChainedViewController.m */; };
 		5F49E95020FC42D600369C85 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F49E94F20FC42D600369C85 /* Calculator.m */; };
 		5F49E95320FC430100369C85 /* CalculateOperate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F49E95220FC430100369C85 /* CalculateOperate.m */; };
+		5F49E95B20FC6B8800369C85 /* RetainCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F49E95A20FC6B8800369C85 /* RetainCountViewController.m */; };
+		5F49E95F20FC6BE800369C85 /* WeakObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F49E95E20FC6BE800369C85 /* WeakObject.m */; };
+		5F49E96320FC6C3A00369C85 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F49E96220FC6C3900369C85 /* TestModel.m */; };
 		5F8F87CC20F8933900037793 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F87CB20F8933900037793 /* AppDelegate.m */; };
 		5F8F87CF20F8933900037793 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F87CE20F8933900037793 /* ViewController.m */; };
 		5F8F87D220F8933900037793 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8F87D020F8933900037793 /* Main.storyboard */; };
@@ -50,6 +53,12 @@
 		5F49E94F20FC42D600369C85 /* Calculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 		5F49E95120FC430100369C85 /* CalculateOperate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculateOperate.h; sourceTree = "<group>"; };
 		5F49E95220FC430100369C85 /* CalculateOperate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculateOperate.m; sourceTree = "<group>"; };
+		5F49E95920FC6B8800369C85 /* RetainCountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetainCountViewController.h; sourceTree = "<group>"; };
+		5F49E95A20FC6B8800369C85 /* RetainCountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetainCountViewController.m; sourceTree = "<group>"; };
+		5F49E95D20FC6BE800369C85 /* WeakObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakObject.h; sourceTree = "<group>"; };
+		5F49E95E20FC6BE800369C85 /* WeakObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakObject.m; sourceTree = "<group>"; };
+		5F49E96120FC6C3900369C85 /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		5F49E96220FC6C3900369C85 /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
 		5F8F87C720F8933900037793 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8F87CA20F8933900037793 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5F8F87CB20F8933900037793 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -141,6 +150,35 @@
 			path = Calculate;
 			sourceTree = "<group>";
 		};
+		5F49E95820FC6B8800369C85 /* RetainCount */ = {
+			isa = PBXGroup;
+			children = (
+				5F49E96020FC6C2D00369C85 /* TestModel */,
+				5F49E95C20FC6BDB00369C85 /* WeakObject */,
+				5F49E95920FC6B8800369C85 /* RetainCountViewController.h */,
+				5F49E95A20FC6B8800369C85 /* RetainCountViewController.m */,
+			);
+			path = RetainCount;
+			sourceTree = "<group>";
+		};
+		5F49E95C20FC6BDB00369C85 /* WeakObject */ = {
+			isa = PBXGroup;
+			children = (
+				5F49E95D20FC6BE800369C85 /* WeakObject.h */,
+				5F49E95E20FC6BE800369C85 /* WeakObject.m */,
+			);
+			path = WeakObject;
+			sourceTree = "<group>";
+		};
+		5F49E96020FC6C2D00369C85 /* TestModel */ = {
+			isa = PBXGroup;
+			children = (
+				5F49E96120FC6C3900369C85 /* TestModel.h */,
+				5F49E96220FC6C3900369C85 /* TestModel.m */,
+			);
+			path = TestModel;
+			sourceTree = "<group>";
+		};
 		5F8F87BE20F8933900037793 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +204,7 @@
 		5F8F87C920F8933900037793 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				5F49E95820FC6B8800369C85 /* RetainCount */,
 				5F49E94820FC41E500369C85 /* Chained */,
 				5F8F87CA20F8933900037793 /* AppDelegate.h */,
 				5F8F87CB20F8933900037793 /* AppDelegate.m */,
@@ -402,10 +441,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F8F87CF20F8933900037793 /* ViewController.m in Sources */,
+				5F49E95B20FC6B8800369C85 /* RetainCountViewController.m in Sources */,
 				5F49E94B20FC41FF00369C85 /* ChainedViewController.m in Sources */,
 				5F8F87DA20F8933A00037793 /* main.m in Sources */,
 				5F8F87CC20F8933900037793 /* AppDelegate.m in Sources */,
 				5F49E95020FC42D600369C85 /* Calculator.m in Sources */,
+				5F49E96320FC6C3A00369C85 /* TestModel.m in Sources */,
+				5F49E95F20FC6BE800369C85 /* WeakObject.m in Sources */,
 				5F49E95320FC430100369C85 /* CalculateOperate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ChainedViewController.h"
+#import "RetainCountViewController.h"
 
 NSString * kViewControllerCellIdentifier = @"kViewControllerCellIdentifier";
 NSString * kViewControllerDataSourceKeyTitle = @"kViewControllerDataSourceKeyTitle";
@@ -86,6 +87,10 @@ NSString * kViewControllerDataSourceKeyClass = @"kViewControllerDataSourceKeyCla
                         @{
                             kViewControllerDataSourceKeyTitle:@"链式语法",
                             kViewControllerDataSourceKeyClass:[ChainedViewController class]
+                            },
+                        @{
+                            kViewControllerDataSourceKeyTitle:@"集合对象弱引用强引用",
+                            kViewControllerDataSourceKeyClass:[RetainCountViewController class]
                             }
                         ];
     }

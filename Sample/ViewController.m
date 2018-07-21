@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ChainedViewController.h"
 #import "RetainCountViewController.h"
+#import "GCDViewController.h"
 
 NSString * kViewControllerCellIdentifier = @"kViewControllerCellIdentifier";
 NSString * kViewControllerDataSourceKeyTitle = @"kViewControllerDataSourceKeyTitle";
@@ -91,6 +92,10 @@ NSString * kViewControllerDataSourceKeyClass = @"kViewControllerDataSourceKeyCla
                         @{
                             kViewControllerDataSourceKeyTitle:@"集合对象弱引用强引用",
                             kViewControllerDataSourceKeyClass:[RetainCountViewController class]
+                            },
+                        @{
+                            kViewControllerDataSourceKeyTitle:@"异步转同步",
+                            kViewControllerDataSourceKeyClass:[GCDViewController class]
                             }
                         ];
     }
